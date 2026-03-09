@@ -11,3 +11,5 @@ students_grades = [[100, 90, 71, 60, 61, 95],
 # 1. How many students got funding
 # 2. What was the average GPA
 # 3. What was the average GPA among those, who got funding
+
+# Some changes
