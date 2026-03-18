@@ -23,3 +23,13 @@ else:
 # 2. What was the average GPA
 # 3. What was the average GPA among those, who got funding
 
+cnt_pass=0
+sum_gpa=0
+sum_col_gpa=0
+for i in range(len(students_grades)):
+    sum_gpa+=sum_gpa+sum(students_grades[i])/len(students_grades)
+    if can_get_funding(students_grades[i]):
+        sum_col_gpa+=sum(students_grades[i])/len(students_grades)
+        cnt_pass+=1
+
+print(cnt_pass, round(sum_gpa/cnt_pass, 2), round(sum_col_gpa/cnt_pass, 2))
