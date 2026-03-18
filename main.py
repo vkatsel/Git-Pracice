@@ -19,7 +19,6 @@ amount_of_students_with_funding = 0
 average_GPA = 0
 average_GPA_funding = 0
 
-
 for grade in students_grades:
     if can_get_funding(grade):
         amount_of_students_with_funding += 1
