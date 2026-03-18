@@ -18,4 +18,4 @@ if can_get_funding(students_grades[2])==True:k+=1
 print(k," students got funding")
 print("Average:",sum(students_grades[0]+students_grades[1]+students_grades[2])/len(students_grades[0]+students_grades[1]+students_grades[2]))
 for grades in students_grades:
-    if can_get_funding(grades)==True:print(sum(grades)/len(grades))
+    if can_get_funding(grades)==True:print("Average GPA among those, who got funding:",sum(grades)/len(grades))
