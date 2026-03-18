@@ -12,8 +12,21 @@ students_grades = [[100, 90, 71, 60, 61, 95],
 
 # TODO: Write a simple algorithm to find out:
 # 1. How many students got funding
+got_funding = []
+for student in students_grades:
+    if can_get_funding(student):
+        got_funding.append(student)
+
+print(f"{len(got_funding)} student got funding")
+
 # 2. What was the average GPA
+
+def avr(list):
+    return sum(list)/len(list)
+
+avrgs = list(map(avr, students_grades))
+print(avr(avrgs))
 # 3. What was the average GPA among those, who got funding
-print(can_get_funding(students_grades[0]))
-print(can_get_funding(students_grades[1]))
-print(can_get_funding(students_grades[2]))
+
+avrgs_passed = list(map(avr, got_funding))
+print(avr(avrgs_passed))
