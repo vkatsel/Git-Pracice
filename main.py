@@ -1,12 +1,27 @@
 def can_get_funding(grades):
     # TODO: Implement function to check 1 student
-    pass
+    average = sum(grades) / len(grades)
+    if average <= 80:
+        return False
+    else:
+        if min(grades) <60:
+            return False
+        else:
+            return True
 
 students_grades = [[100, 90, 71, 60, 61, 95],
                    [85, 80, 87, 98, 95, 78],
                    [59, 70, 67, 88, 65, 58]]
+num_stu_got_gun = 0
+global_avg = 0
+avg_fund = 0
 
-
+for i in range(len(students_grades)):
+    global_avg += sum(students_grades[i]) / len(students_grades[i])
+    if can_get_funding(students_grades[i]):
+        num_stu_got_gun+=1
+        avg_fund += sum(students_grades[i]) / len(students_grades[i])
+print(num_stu_got_gun,round(global_avg/len(students_grades),2), round(avg_fund/num_stu_got_gun,2) )
 # TODO: Write a simple algorithm to find out:
 # 1. How many students got funding
 # 2. What was the average GPA
