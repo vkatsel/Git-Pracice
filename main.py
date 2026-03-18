@@ -20,10 +20,6 @@ average_GPA = 0
 average_GPA_funding = 0
 
 
-# TODO: Write a simple algorithm to find out:
-# 1. How many students got funding
-# 2. What was the average GPA
-# 3. What was the average GPA among those, who got funding
 for grade in students_grades:
     if can_get_funding(grade):
         amount_of_students_with_funding += 1
