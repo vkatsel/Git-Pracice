@@ -1,6 +1,6 @@
 def can_get_funding(grades):
-    avf_grade = sum(grades) / len(grades)
-    if avf_grade <= 80:
+    avg_grade = sum(grades) / len(grades)
+    if avg_grade <= 80:
         return False
     else:
         if min(grades) < 60:
@@ -17,6 +17,18 @@ if passed:
     print("Student gets funding")
 else:
     print("No")
+
+
+cnt_pass = 0
+sum_gpa = 0
+sum_cool_gpa = 0
+for i in range(len(students_grades)):
+    sum_gpa = sum_gpa + sum(students_grades[i])/len(students_grades[i])
+    if can_get_funding(students_grades[i]):
+        sum_cool_gpa = sum_cool_gpa + sum(students_grades[i])/len(students_grades[i])
+        snt_pass += 1
+
+print(cnt_pass, round(sum_gpa/len(students_grades), 2), round(sum_cool_gpa/len(students_grades), 2))
 
 # TODO: Write a simple algorithm to find out:
 # 1. How many students got funding
