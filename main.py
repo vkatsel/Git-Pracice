@@ -1,6 +1,6 @@
 def can_get_funding(grades):
     # TODO: Implement function to check 1 student
-    if sum(grades)/len(grades)>=60: return True
+    if sum(grades)/len(grades)>=80 and min(grades)>=60: return True
     return False
 
 students_grades = [[100, 90, 71, 60, 61, 95],
