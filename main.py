@@ -38,3 +38,7 @@ print(f"Average GPA among those, who got funding: {sum(gpa_passed_list)/len(gpa_
 # 1. How many students got funding
 # 2. What was the average GPA
 # 3. What was the average GPA among those, who got funding
+
+#   o
+# / | \
+#  / \
