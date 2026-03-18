@@ -14,6 +14,21 @@ if passed:
     print("Student gets funding")
 else:
     print("No")
+student_with_fund = 0
+average_grades = 0
+average_student_with_fund = 0
+
+
+for grades in range(len(students_grades)):
+    average_grades = average_grades + sum(students_grades[grades]) / len(students_grades[grades])
+    if can_get_funding(students_grades[grades]):
+        average_student_with_fund = average_student_with_fund + sum(students_grades[grades]) / len(students_grades[grades])
+        student_with_fund += 1
+
+
+
+
+
 
 
 
