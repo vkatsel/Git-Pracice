@@ -24,7 +24,7 @@ for i in range(len(students_grades)):
     if can_get_funding(students_grades[i]):
         sum_pass_gpa = sum_pass_gpa + sum(students_grades[i])/len(students_grades[i])
         students_passed += 1
-print(students_passed, sum_gpa, sum_pass_gpa)
+print(students_passed, round(sum_gpa, 2), round(sum_pass_gpa, 2))
 # TODO: Write a simple algorithm to find out:
 # 1. How many students got funding
 # 2. What was the average GPA
