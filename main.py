@@ -11,11 +11,27 @@ def can_get_funding(grades):
         else:
             return True
 
-passed = can_get_funding(students_grades[2])
-if passed:
-    print("Student can get funding")
-else:
-    print("No")
+# passed = can_get_funding(students_grades[2])
+#
+# funded = 0
+# avr_gpa = 0
+# avr_gpa_funded = 0
+# for i in range(3):
+#     if can_get_funding((students_grades[i])):
+#         funded += 1
+
+cnt_pass = 0
+sum_gpa = 0
+sum_cool_gpa = 0
+for i in range(len(students_grades)):
+    sum_gpa = sum_gpa + sum(students_grades[i])/len(students_grades[i])
+    if can_get_funding(students_grades[i]):
+        sum_cool_gpa = sum_cool_gpa + sum(students_grades[i])/len(students_grades[i])
+        cnt_pass += 1
+
+print(cnt_pass, sum_gpa/len(students_grades), sum_cool_gpa/cnt_pass)
+
+
 
 
 
