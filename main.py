@@ -32,4 +32,4 @@ for i in range(len(students_grades)):
         sum_col_gpa+=sum(students_grades[i])/len(students_grades)
         cnt_pass+=1
 
-print(cnt_pass, round(sum_gpa/cnt_pass, 2), round(sum_col_gpa/cnt_pass, 2))
+print(cnt_pass, round(sum_gpa/cnt_pass, 3), round(sum_col_gpa/cnt_pass, 3))
